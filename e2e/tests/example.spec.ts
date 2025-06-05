@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("has title", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/http://localhost:5173/");
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle("Playwright Sandbox");
@@ -9,7 +9,7 @@ test("has title", async ({ page }) => {
 });
 
 test("Hide and show intro", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("http://localhost:5173/");
 
   await page.getByRole("button", { name: "Click Me!" }).click();
 
